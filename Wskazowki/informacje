@@ -1,0 +1,18 @@
+1. Po dodaniu bundla należy go dodać w composer.json
+
+    "autoload": {
+        "psr-4": {
+            "MainBundle\\": "src/MainBundle"
+        },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+    },
+
+    i uruchomić w konsoli: composer dump-autoload.
+    Należy też sprawdzić, czy jest w AppKernel.php.
+
+2. Jeśli nie widać szablonu z bundla należy dodać w app/config/config.yml:
+
+    templating:
+        engines: ['twig']
+
+3. Jeśli chcesz dodać pliki CSS lub JS należy je umieścić w web/css lub web/js.
