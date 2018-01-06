@@ -16,8 +16,10 @@
         <div id="menu">
         </div>
         <div id="content">
-            {% block body %}{% endblock %}
-        </div>
-        {% block javascripts %}{% endblock %}
-    </body>
+        {% block body %}{% endblock %}
+    </div>
+    {% block javascripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% endblock %}
+</body>
 </html>

@@ -5,22 +5,132 @@
 #menu{
     width: 200px;
     float: left;
-    height: 500px;
+    height: 590px;
     background-color: bisque;
 }
 
 #header{
-    height: 100px;
+    height: 140px;
     width: 100%;
     border-bottom: 3px solid salmon;
 }
 
 #header h2{
-    text-align: center;
-    padding-top: 30px;
+    padding-top: 50px;
+    margin-left: 150px;
+    font-family: monospace;
+    font-size: 26px;
+}
+
+#header img{
+    float:left;
 }
 
 #content{
     padding: 30px;
     float: left;
+}
+
+/*Event*/
+#mainEvent{
+    margin: 0 auto;
+    width: 500px;
+}
+
+#nextEvent{
+    height: 250px;
+    background-color: #fbd3a3;
+    text-align: center;
+    font-family: monospace;
+}
+
+#eventDate{
+    padding: 50px;
+    font-size: 43px;
+    color: cadetblue;
+}
+
+#eventName{
+    font-size: 24px;
+}
+
+#eventActions{
+    margin-top: 20px;
+}
+
+.eventsCenter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.eventAction{
+    background-color: bisque;
+    height: 60px;
+    width: 86px;
+    padding: 30px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    text-decoration: none;
+    color: inherit;
+}
+
+#events{
+    width: 1100px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.yourEvent{
+    background-color: cadetblue;
+    height: 100px;
+    width:100px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 20px solid white;
+}
+
+.yourEvent:hover{
+    color:white;
+}
+
+/*editEvent*/
+.editEventForm div{
+    margin-top: 15px;
+}
+
+.editEventForm label{
+    display: flex;
+    font-family: sans-serif;
+}
+
+.editEventForm input{
+    width: 250px;
+}
+
+.editEventForm textarea{
+    width: 250px;
+    height: 50px;
+}
+
+h3{
+    font-family: sans-serif;
+}
+
+#message{
+    color: red;
+}
+body{
+    font-family: mainfont;
+}
+
+a{
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: mainfont;
+    src: url(sansation_light.woff);
 }
