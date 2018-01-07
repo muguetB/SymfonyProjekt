@@ -25,6 +25,7 @@
 #header img{
     float:left;
     margin-left: 9px;
+    cursor: pointer;
 }
 
 #content{
@@ -142,6 +143,32 @@
     margin-top: 5px;
 }
 
+/*menu*/
+.menulink{
+    text-decoration: none;
+    color: inherit;
+}
+
+#menuElements{
+    color: brown;
+    margin-left: 10px;
+}
+
+#menuElements a{
+    display: block;
+}
+
+#userInfo{
+    height: 100px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+#userInfo span{
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
 h3{
     font-family: sans-serif;
 }
@@ -150,7 +177,7 @@ h3{
     color: red;
 }
 body{
-    font-family: mainfont;
+    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
 }
 
 a{

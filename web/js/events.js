@@ -24,3 +24,7 @@ function askBeforeDelete(eventName, eventId) {
         window.location.href = '/deleteEvent/' + eventId;
     }
 }
+
+function gotoMainPage() {
+    window.location.href = '/main';
+}

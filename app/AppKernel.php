@@ -18,6 +18,7 @@ class AppKernel extends Kernel {
             new MainBundle\MainBundle(),
             new EventsBundle\EventsBundle(),
             new CommentsBundle\CommentsBundle(),
+            new UserBundle\UserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
