@@ -1,0 +1,15 @@
+events_homepage:
+    path:     /
+    defaults: { _controller: EventsBundle:Default:index }
+
+editEventView:
+    path: /editEventView/{id}
+    defaults: { _controller: EventsBundle:Default:editEventView }
+
+eventSuccess:
+    path: /eventSuccess/{status}
+    defaults: { _controller: MainBundle:Main:index }
+
+addEvent:
+    path: /addEvent
+    defaults: { _controller: EventsBundle:Default:editEventView }
