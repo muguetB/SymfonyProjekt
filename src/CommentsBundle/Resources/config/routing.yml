@@ -1,0 +1,3 @@
+showComments:
+    path:     /showComments/{eventId}
+    defaults: { _controller: CommentsBundle:Comments:showComments }

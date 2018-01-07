@@ -14,14 +14,14 @@
         </div>
         <div id="eventActions" class="eventsCenter">
             <a class="eventAction" id="eventEdit" href="/editEventView/{{mainEvent.id}}">Edytuj wydarzenie</a>
-            <a class="eventAction" id="eventComments" onclick="showCommentsEvent({{mainEvent.id}});">Zobacz komentarze</a>
+            <a class="eventAction" id="eventComments" href="/showComments/{{mainEvent.id}}">Zobacz komentarze</a>
             <a class="eventAction" id="eventAdd" href="/addEvent">Dodaj nowe wydarzenie</a>
         </div>
     </div>
     <div id="events">
         <h3>Wszystkie wydarzenia:</h3>
         {% for event in events %}
-            <a class="yourEvent">{{ event.date|date("j F") }} {{event.name}}</a>
+            <a class="yourEvent" href="/showEvent/{{event.id}}">{{ event.date|date("j F") }} {{event.name}}</a>
         {% endfor %}
     </div>
 {% endblock %}

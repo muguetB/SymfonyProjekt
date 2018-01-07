@@ -18,4 +18,15 @@ class MainController extends Controller {
         );
     }
 
+    public function changeEventAction($eventId) {
+        $eventsManager = new EventsManager();
+
+        return $this->render('MainBundle:Default:index.html.twig', array(
+                    'events' => $eventsManager->getUserEvents(1),
+                    'mainEvent' => $eventsManager->getEvent($eventId),
+                    'status' => 0
+                        )
+        );
+    }
+
 }

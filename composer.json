@@ -6,7 +6,8 @@
     "autoload": {
         "psr-4": {
             "MainBundle\\": "src/MainBundle",
-            "EventsBundle\\": "src/EventsBundle"
+            "EventsBundle\\": "src/EventsBundle",
+            "CommentsBundle\\": "src/CommentsBundle"
         },
         "classmap": ["app/AppKernel.php", "app/AppCache.php"]
     },

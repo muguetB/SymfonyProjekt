@@ -2,3 +2,7 @@ main_homepage:
     path:     /main/{status}
     controller: MainBundle:Main:index
     defaults: {status: 0}
+
+showEvent:
+    path:   /showEvent/{eventId}
+    controller: MainBundle:Main:changeEvent

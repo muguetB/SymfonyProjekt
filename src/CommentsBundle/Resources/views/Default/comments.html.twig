@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <a href="/showEvent/{{eventId}}">Powrót</a>
+    <h3>Komentarze do wydarzenia</h3>
+    {% for comment in comments %}
+        <div class="commentEvent">
+            <div class="commentUser">{{comment.userName}}</div>
+            <div class="commentText">{{comment.commentText}}</div>
+            <button onclick="deleteComment({{comment.id}});">Usuń komentarz</button>
+        </div>
+    {% endfor %}
+{% endblock %}
