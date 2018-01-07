@@ -5,11 +5,8 @@ namespace EventsBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use EventsBundle\Manager\EventsManager;
 use EventsBundle\Entity\Event;
+use EventsBundle\Form\EventType;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class DefaultController extends Controller {
 
@@ -28,13 +25,7 @@ class DefaultController extends Controller {
             $editEvent = false;
         }
 
-        $form = $this->createFormBuilder($event)
-                ->add('name', TextType::class, array('label' => 'Nazwa wydarzenia: '))
-                ->add('date', DateType::class, array('widget' => 'single_text', 'label' => 'Data wydarzenia: '))
-                ->add('streets', TextType::class, array('label' => 'Ulice objęte wydarzeniem: '))
-                ->add('description', TextareaType::class, array('label' => 'Opis wydarzenia: '))
-                ->add('save', SubmitType::class, array('label' => 'Zapisz'))
-                ->getForm();
+        $form = $this->createForm(EventType::class, $event);
 
         $form->handleRequest($request);
 
