@@ -1,15 +1,4 @@
 {% extends 'base.html.twig' %}
-{% block menu %}
-    <div id="userInfo">
-        <span>{{user.name}}</span><br>
-        <b>{{user.companyName}}</b><br>
-    </div>
-    <div id="menuElements">
-        <a class="menulink" href="/editUser/{{user.userId}}">Edytuj swoje dane</a><br>
-        <a class="menulink" href="">Znajdź dostawce</a><br>
-        <a class="menulink" href="/logout/{{user.userId}}">Wyloguj</a><br>
-    </div>
-{% endblock %}
 {% block body %}
     {% if status == 1 %}
         <div id="message">Zapisano pomyślnie dane!</div>

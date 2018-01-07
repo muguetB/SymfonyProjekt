@@ -14,14 +14,16 @@
             <h2>Manifestacje, korki, informacje</h2>
         </div>
         <div id="menu">
-        {% block menu %}{% endblock %}
+            {% block menu %}
+                {{ render(controller('UserBundle:User:index')) }}
+            {% endblock %}
+        </div>
+        <div id="content">
+        {% block body %}{% endblock %}
     </div>
-    <div id="content">
-    {% block body %}{% endblock %}
-</div>
-{% block javascripts %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="{{ asset('js/events.js') }}"></script>
-{% endblock %}
+    {% block javascripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{{ asset('js/events.js') }}"></script>
+    {% endblock %}
 </body>
 </html>
