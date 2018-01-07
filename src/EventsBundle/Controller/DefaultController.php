@@ -3,7 +3,7 @@
 namespace EventsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use EventsBundle\Manager\EventsManager;
+use EventsBundle\Service\EventsManager;
 use EventsBundle\Entity\Event;
 use EventsBundle\Form\EventType;
 use Symfony\Component\HttpFoundation\Request;

@@ -3,7 +3,7 @@
 namespace MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use EventsBundle\Manager\EventsManager;
+use EventsBundle\Service\EventsManager;
 
 class MainController extends Controller {
 

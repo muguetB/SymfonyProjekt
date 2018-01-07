@@ -1,6 +1,6 @@
 <?php
 
-namespace CommentsBundle\Manager;
+namespace CommentsBundle\Service;
 
 class TymczasoweDane {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace EventsBundle\Manager;
+namespace EventsBundle\Service;
 
 class TymczasoweDane {
 

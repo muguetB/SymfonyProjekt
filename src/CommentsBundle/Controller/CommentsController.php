@@ -3,7 +3,7 @@
 namespace CommentsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use CommentsBundle\Manager\CommentsManager;
+use CommentsBundle\Service\CommentsManager;
 
 class CommentsController extends Controller {
 

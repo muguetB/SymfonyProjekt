@@ -1,6 +1,6 @@
 <?php
 
-namespace EventsBundle\Manager;
+namespace EventsBundle\Service;
 
 class EventsManager {
 
@@ -27,7 +27,7 @@ class EventsManager {
     }
 
     public function deleteEvent($event) {
-        
+
     }
 
 }
