@@ -17,3 +17,10 @@ function editEvent(eventId) {
         }
     });
 }
+
+function askBeforeDelete(eventName, eventId) {
+    var ask = confirm("Czy na pewno chcesz usunąć wydarzenie " + eventName + "?");
+    if (ask) {
+        window.location.href = '/deleteEvent/' + eventId;
+    }
+}

@@ -35,7 +35,14 @@ class DefaultController extends Controller {
             return $this->redirectToRoute('eventSuccess', array('status' => 1));
         }
 
-        return $this->render('EventsBundle:Default:editEventView.html.twig', array('form' => $form->createView(), 'editEvent' => $editEvent));
+        return $this->render('EventsBundle:Default:editEventView.html.twig', array('form' => $form->createView(), 'editEvent' => $editEvent, 'event' => $eventInformation));
+    }
+
+    public function deleteEventAction($eventId) {
+        $eventsManager = new EventsManager();
+        $eventsManager->deleteEvent($eventId);
+
+        return $this->redirect($this->generateUrl('main_homepage'));
     }
 
 }

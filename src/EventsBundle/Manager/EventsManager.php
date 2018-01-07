@@ -23,6 +23,10 @@ class EventsManager {
     }
 
     public function saveEvent($event) {
+
+    }
+
+    public function deleteEvent($event) {
         
     }
 

@@ -1,11 +1,23 @@
 {% extends 'base.html.twig' %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/events.js') }}"></script>
+{% endblock %}
 {% block body %}
     {% if editEvent %}
-        <h3>Edycja wydarzenia</h3>
+        <h3>Edycja wydarzenia {{event.name}}</h3>
     {% else %}
         <h3>Tworzenie nowego wydarzenia</h3>
     {% endif %}
     {{ form_start(form) }}
     {{ form_widget(form, { 'attr': {'class': 'editEventForm'} }) }}
     {{ form_end(form) }}
+    {% if editEvent %}
+        <div id="deleteEvent">
+            <h3>Usuwanie wydarzenia</h3>
+            <span>Jeśli chcesz usunąć wydarzenie naciśnij przycisk ponieżej.<br>
+                Wydarzenie zostanie usunięte ze zbioru wszystkich wydarzeń widocznych dla użytwkoników aplikacji.</span><br>
+            <button onclick="askBeforeDelete('{{event.name}}', {{event.id}});">Usuń wydarzenie</button>
+        </div>
+    {% endif %}
 {% endblock %}

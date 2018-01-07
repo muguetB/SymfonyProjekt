@@ -13,3 +13,7 @@ eventSuccess:
 addEvent:
     path: /addEvent
     defaults: { _controller: EventsBundle:Default:editEventView }
+
+deleteEvent:
+    path: /deleteEvent/{eventId}
+    defaults: { _controller: EventsBundle:Default:deleteEvent }
